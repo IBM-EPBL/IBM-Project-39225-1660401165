@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock title %}
+{% block content %}
+{% if succ %}
+<div class="alert alert-success" role="alert">{{ succ }}</div>
+
+{% endif %}
+<div class="text-center">
+    <br>
+    <h1>Welcome to My Website</h1>
+    <br>
+    <p>This is a <strong>flask-app</strong> assignment.</p>
+    <br>
+    <br>
+    <br>
+
+    <p>developed by</p>
+    <br>
+    <h2>Kirubanand R</h2>
+</div>
+{% endblock content %}
