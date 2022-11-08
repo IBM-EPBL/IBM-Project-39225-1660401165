@@ -9,8 +9,8 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (username, password, name, email) VALUES (
-    "kiruba-r11",
-    "dbpassword",
-    "kiruba",
-    "19cs121@psgitech.ac.in"
+    "kishore-19cs123",
+    "12345678",
+    "kishore",
+    "19cs123@psgitech.ac.in"
 );
