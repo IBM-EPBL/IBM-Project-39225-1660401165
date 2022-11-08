@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock title %}
+{% block content %}
+<br>
+<div class="formuwu">
+  <div class="form" method="post">
+    <form method="post">
+      <div class="mb-3">
+        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId"
+          placeholder="Enter your Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" name="username" id="username" aria-describedby="helpId"
+          placeholder="Enter your Username" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId"
+          placeholder="Enter your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" required>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}
