@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: Abinaya/flask
+          image: Muthu/flask
           imagePullPolicy: Never
           ports:
             - containerPort: 5000
