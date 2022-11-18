@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommender</title>
+
+    <link rel="stylesheet" href="http://s3.jp-tok.cloud-object-storage.appdomain.cloud/jobportalwebsite/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="http://s3.jp-tok.cloud-object-storage.appdomain.cloud/jobportalwebsite/assets/css/style.css">
+</head>
+<body>
+
+    <form class="mt-5 d-flex justify-content-center flex-column align-items-center" action="/apply" method="post">
+        <h1>Apply</h1>
+
+        <div class="text-center msg mt-3 mb-3">{{ msg }}</div>
+            <input style="min-width: 500px;" class="p-2" type="text" name="username" placeholder="Enter your User Name"  id="username" required></br></br>
+            <input style="min-width: 500px;" class="p-2" type="email" name="email" placeholder="Enter your Email"  id="email" required></br></br>
+            <input style="min-width: 500px;" class="p-2" type="text" name="qualification" placeholder="Enter your Qualification"  id="qualification" required></br></br>
+            <input style="min-width: 500px;" class="p-2" type="text" name="skills" placeholder="Enter your Skills" id="skills" required></br></br>
+            <button type="submit" id="button" class="btn btn-primary"> Submit</button>
+        </div>
+        <div class="note mt-3 text-center">
+            <p> click here to go to <a style="color: #fb246a;" href="/dashboard">Dashboard!</a> </p>
+        </div>
+    </form>
+</body>
+</html>
