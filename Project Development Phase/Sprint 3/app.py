@@ -5,7 +5,7 @@ import re
 
 
 app =Flask(__name__)
-app.secret_key='a'
+app.secret_key='jobrecommender'
 
 conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=8e359033-a1c9-4643-82ef-8ac06f5107eb.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=30120;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;PROTOCOL=TCPIP;UID=mnt68303;PWD=bwznNCTwcvzfsh98",'','')
 @app.route('/')
@@ -111,11 +111,6 @@ def display():
     ibm_db.bind_param(stmt,1,"muthu")
     ibm_db.execute(stmt)
     account=ibm_db.fetch_assoc(stmt)
-
-
-    # cursor=mysql.connection.cursor()
-    # cursor.execute('SELECT * FROM job WHERE userid = %s',(session['id']))
-    # account=cursor.fetchone()
     print("accountdisplay",account)
 
     return render_template('display.html',account=account)

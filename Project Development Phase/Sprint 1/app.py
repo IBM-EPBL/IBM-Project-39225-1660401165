@@ -5,7 +5,7 @@ import re
 
 msg = ""
 app =Flask(__name__)
-app.secret_key='a'
+app.secret_key='jobrecommender'
 
 @app.route('/')
 def home():
