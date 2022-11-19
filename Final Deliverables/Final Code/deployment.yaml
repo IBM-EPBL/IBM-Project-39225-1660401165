@@ -1,0 +1,44 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: job
+# spec:
+#   replicas: 3
+#   selector:
+#     matchLabels:
+#       app: job
+#   template:
+#     metadata:
+#       labels:
+#         app: job
+#     spec:
+#       containers:
+#       - name: job
+#         image: kishorelaxman/skill_job_recommendation-1
+#         imagePullPolicy: Always
+#         ports:
+#         - containerPort: 5000
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-1
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-app-1
+  template:
+    metadata:
+      labels:
+        app: flask-app-1
+
+    spec:
+      containers:
+        - name: flask-app-container
+          image: docker.io/kishorelaxman/skill_job_recommendation-1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              protocol: TCP
